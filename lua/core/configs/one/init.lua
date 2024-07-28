@@ -1,0 +1,5 @@
+require("core.configs.one.schema")
+require("core.configs.one.lualine")
+require("core.configs.one.tree")
+require("core.configs.one.treesitter")
+require("core.configs.one.telescope")
