@@ -1,0 +1,6 @@
+require("plugins.one.schema")
+require("plugins.one.autoformat")
+require("plugins.one.mini")
+require("plugins.one.tree")
+require("plugins.one.treesitter")
+require("plugins.one.telescope")

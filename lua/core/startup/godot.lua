@@ -1,10 +1,11 @@
-function file_exists(name)
-   local f = io.open(name, "r")
-   return f ~= nil and io.close(f)
+-- Enable neovim to be the external editor for Godot, if the cwd has a project.godot file
+if vim.fn.filereadable(vim.fn.getcwd() .. '/project.godot') == 1 then
+  local address = './godot.pipe'
+  if is_windows then address = '127.0.0.1:6004' end
+  vim.fn.serverstart(address)
 end
 
-local project = vim.fn.getcwd() .. '/project.godot'
-if file_exists(project) then
-    print("Synced to Godot Engine")
-    vim.fn.serverstart './godothost'
-end
+--[=[ Godot Engine Neovim as External Editor
+  -   Exec Path: nvim
+  -   Exec Flags: --server 127.0.0.1:6004 --remote-send "<esc>:n {file}<CR>:call cursor({line},{col})<CR>"
+]=]-- Config

@@ -1,0 +1,5 @@
+require('plugins.lsp.commands.featuring.highlight')
+require('plugins.lsp.commands.featuring.hints')
+require('plugins.lsp.commands.detach')
+require('plugins.lsp.commands.features')
+require('plugins.lsp.commands.attach')
