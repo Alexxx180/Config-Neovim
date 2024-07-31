@@ -1,0 +1,1 @@
+nvimtree = { ':NvimTreeFindFile', ':NvimTreeToggle<CR>' }

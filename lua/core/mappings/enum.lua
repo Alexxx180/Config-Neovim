@@ -12,8 +12,7 @@ mappings = {
         },
     },
     lsp = {
-        builtin = {
-            -- Word under cursor actions -- Symbols = methods, variables and so on
+        builtin = { -- Word under cursor actions -- Symbols = methods, variables and so on
             lsp_references = { desc = 'LSP [G]oto [R]eferences', key = 'gr' }, -- Find references for the word.
             lsp_definitions = { desc = 'LSP [G]oto [D]efinition', key = 'gd' }, -- Jump to the word definition
             lsp_implementations  = { desc = 'LSP [G]oto [I]mplementation', key = 'gI' }, -- Jump to the word implementation.
@@ -62,9 +61,7 @@ mappings = {
         },
     },
     tree = {
-        [':NvimTreeFindFile'] = { desc = 'NTree Find File', key = '<c-n>' }
-        [':NvimTreeToggle<CR>'] = { desc = 'NTree Find File', key = '<c-n>' }
-        vim.keymap.set('n', '<c-n>', ':NvimTreeFindFile<CR>')
-        vim.keymap.set('n', '<c-o>', ':NvimTreeToggle<CR>')
+        [':NvimTreeFindFile'] = { desc = 'NTree Find File', key = '<c-n>' },
+        [':NvimTreeToggle<CR>'] = { desc = 'NTree Find File', key = '<c-o>' },
     }
 }

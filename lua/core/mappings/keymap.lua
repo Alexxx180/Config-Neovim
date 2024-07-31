@@ -8,15 +8,21 @@ function keysmap(params, feature, buffer)
     vim.keymap.set(mode, params.key, feature, attributes)
 end
 
-function map_features(mapping, plugin, features, buffer)
-    for _, feature in ipairs(features) do
-        keysmap(mapping[feature], plugin[feature], buffer)
+function map_features(mapping, features, plugin, buffer)
+    if plugin ~= nil then
+        for _, feature in ipairs(features) do
+            keysmap(mapping[feature], plugin[feature], buffer)
+        end
+    else
+        for _, feature in ipairs(features) do
+            keysmap(mapping[feature], feature, buffer)
+        end
     end
 end
 
 function map_linked_features(group, providers, buffer)
     for subgroup, provider in pairs(providers) do
         local mapping = mappings[group][subgroup]
-        map_features(mapping, provider.plugin, provider.features, buffer)
+        map_features(mapping, provider.features, provider.plugin, buffer)
     end
 end

@@ -5,9 +5,9 @@ function use_packer(name)
     local author = authors[name]
     if not vim.loop.fs_stat(path) then
         local repo = "https://github.com/"..author.."/"..name..".nvim.git"
-        vim.fn.system({'git', 'clone', '--filter=blob:none', '--branch=stable' repo, path})
+        vim.fn.system({ 'git', 'clone', '--filter=blob:none', '--branch=stable', repo, path })
     end
-    vim.opt.rtp:prepend(pckr_path)
+    vim.opt.rtp:prepend(path)
 end
 
 use_packer(packer_name)
