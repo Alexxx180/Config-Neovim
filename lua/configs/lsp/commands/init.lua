@@ -1,0 +1,6 @@
+require('core.configs.lsp.config.mapping')
+require('core.configs.lsp.commands.highlight')
+require('core.configs.lsp.commands.detach')
+require('core.configs.lsp.commands.hints')
+require('core.configs.lsp.commands.features')
+require('core.configs.lsp.commands.attach')

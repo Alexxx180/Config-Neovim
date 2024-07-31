@@ -1,19 +1,4 @@
-﻿local function bootstrap_pckr()
-    local pckr_path = vim.fn.stdpath("data") .. "/pckr/pckr.nvim"
-
-    if not vim.loop.fs_stat(pckr_path) then
-        vim.fn.system({
-            'git',
-            'clone',
-            '--filter=blob:none',
-            'https://github.com/lewis6991/pckr.nvim',
-            pckr_path
-        })
-    end
-
-    vim.opt.rtp:prepend(pckr_path)
-end
-
+﻿
 bootstrap_pckr()
 --require("core.plugin_config.nvim-lspconfig")
 
@@ -91,12 +76,8 @@ return require('pckr').add{
       { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
       'williamboman/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
-
       -- Useful status updates for LSP.
-      -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
       { 'j-hui/fidget.nvim', opts = {} },
-
-      -- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
       -- used for completion, annotations and signatures of Neovim apis
       { 'folke/neodev.nvim', opts = {} },
     },
