@@ -36,7 +36,7 @@ vim.opt.listchars = {
 	trail = '·',
 	nbsp = '␣',
 }
-vim.opt.expandtab = true
+vim.opt.expandtab = false
 
 vim.opt.signcolumn = 'yes'
 vim.opt.updatetime = 250

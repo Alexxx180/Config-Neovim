@@ -23,5 +23,7 @@ function telescope_config()
         extensions = { ['ui-select'] = { require('telescope.themes').get_dropdown(), }, },
     }
     enable_extensions()
+	print("TELESCOPE START")
     map_linked_features('telescope', get_telescope_features()) -- See `:help telescope.builtin`
+	print("TELESCOPE END")
 end

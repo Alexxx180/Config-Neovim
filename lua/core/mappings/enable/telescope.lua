@@ -2,14 +2,14 @@ telescope = {
     builtin = { 
         plugin = nil,
         features = {
-            help_tags, keymaps, find_files, builtin, grep_string,
-            live_grep, diagnostics, resume, oldfiles, buffers,
+            'help_tags', 'keymaps', 'find_files', 'builtin', 'grep_string',
+            'live_grep', 'diagnostics', 'resume', 'oldfiles', 'buffers',
         }
     },
     buffer = {
         plugin = nil,
         features = {
-            buffer_search, live_grep, find_files,
+            'buffer_search', 'live_grep', 'find_files',
         }
     }
 }
