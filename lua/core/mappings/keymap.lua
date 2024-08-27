@@ -5,18 +5,12 @@ function keysmap(params, feature, buffer)
     local attributes = { desc = params.description }
     if buffer then attributes.buffer = buffer end
 
-	local key = params.key
-
-	print("MODE: "..mode.." - "..key)
-
     vim.keymap.set(mode, params.key, feature, attributes)
 end
 
 function map_features(mapping, features, plugin, buffer)
     if plugin ~= nil then
         for _, feature in ipairs(features) do
-			print("FEATURE: "..feature)
-			-- print("MAPPING: "..mapping[feature])
             keysmap(mapping[feature], plugin[feature], buffer)
         end
     else

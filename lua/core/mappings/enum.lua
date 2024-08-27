@@ -48,16 +48,9 @@ mappings = {
             buffers = { desc = '[ ] Find existing buffers', key = '<leader><leader>' },
         },
         buffer = {
-            plugin = {
-                buffer_search = buffer_search,
-                live_grep = live_grep,
-                find_files = find_files
-            },
-            features = {
-                buffer_search = { desc = '[/] Fuzzily search in current buffer', key = '<leader>/' },
-                live_grep = { desc = '[S]earch [/] in Open Files', key = '<leader>sn' },
-                find_files = { desc = '[S]earch [N]eovim files', key = '<leader>s/' },  -- Search Neovim config files
-            },
+            buffer_search = { desc = '[/] Fuzzily search in current buffer', key = '<leader>/' },
+			live_grep = { desc = '[S]earch [/] in Open Files', key = '<leader>sn' },
+			find_files = { desc = '[S]earch [N]eovim files', key = '<leader>s/' },  -- Search Neovim config files,
         },
     },
     tree = {
